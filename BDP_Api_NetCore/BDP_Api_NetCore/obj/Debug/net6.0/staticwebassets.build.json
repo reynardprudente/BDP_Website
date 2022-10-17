@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "L0PZVlFY8ngJu50wXu1VtxGkK1rWRqOWtcy00iQW+1M=",
+  "Source": "BDP_Api_NetCore",
+  "BasePath": "_content/BDP_Api_NetCore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
