@@ -1,0 +1,12 @@
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\bin\Debug\net6.0\BDP.Domain.deps.json
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\bin\Debug\net6.0\BDP.Domain.dll
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\bin\Debug\net6.0\BDP.Domain.pdb
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.csproj.AssemblyReference.cache
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.AssemblyInfoInputs.cache
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.AssemblyInfo.cs
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.csproj.CoreCompileInputs.cache
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.dll
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\refint\BDP.Domain.dll
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\BDP.Domain.pdb
+C:\Users\prre\Desktop\BDP_Project\BDP_Api_NetCore\BDP.Domain\obj\Debug\net6.0\ref\BDP.Domain.dll

@@ -1,0 +1,28 @@
+<div class="content">
+    <mat-grid-list cols="3" rowHeight="100vh">
+        <mat-grid-tile class="left-pane-wrapper loginBackground" [colspan]="2">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title class="loginTitle text-center">BANKO DE PILIPINAS</mat-card-title>
+                    <mat-card-subtitle class="subTitle">Automated Teller Website</mat-card-subtitle>
+                </mat-card-header>   
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile class="right-pane-wrapper" [colspan]="1">
+            <form [formGroup] = "loginForm" (ngSubmit) = "onSubmit()">
+                <div class="login-form">
+                    <h1>Sign In</h1>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" type="text">
+                     </mat-form-field>
+                     <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="password" type = "password">
+                     </mat-form-field>
+                     <button mat-raised-button color="primary">LOGIN</button>
+                </div>
+            </form>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

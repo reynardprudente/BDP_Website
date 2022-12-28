@@ -1,0 +1,31 @@
+@import 'src/styles/variables';
+
+.loginTitle{
+    font-family: OceaniaRegular;
+    color: $color-grey-3;
+    font-size: 30px;   
+}
+.subTitle {
+  font-family: OceaniaRegular;
+  color: $color-grey-3;
+  font-size: 20px;   
+}
+
+mat-grid-list{
+    padding-bottom: 0 !important;
+    .left-pane-wrapper{
+        background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+    }
+    .right-pane-wrapper{
+        background-color: $color-light-1;
+        .login-form{
+            width: 300px; 
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-family: Georgia, serif;
+            }
+        }
+    }
+}

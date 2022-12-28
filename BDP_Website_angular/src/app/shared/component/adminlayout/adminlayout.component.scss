@@ -1,0 +1,30 @@
+@import 'src/styles/variables';
+
+.flexExpand{
+    flex: 1 1 auto;
+}
+.footer {
+    text-align: center;
+    background-color: $color-primary-7;
+    position: absolute !important;
+    bottom: 0;
+    width:100%;
+  }
+
+mat-toolbar{
+    background-color:$color-primary-7;
+    mat-icon{
+        color: white;
+        fill: white;
+    }
+    mat-form-field{
+        width: 18em;
+        color: white;
+        button{
+            border-color: transparent;
+        }
+    }
+    mat-list{
+        margin-left: 20px;
+    }
+}
