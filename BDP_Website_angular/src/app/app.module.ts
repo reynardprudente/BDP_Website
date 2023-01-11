@@ -18,6 +18,7 @@ import { AdminlayoutComponent } from './shared/component/adminlayout/adminlayout
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";  
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,13 +14,33 @@
                     <h1>Sign In</h1>
                     <mat-form-field appearance="outline">
                         <mat-label>Username</mat-label>
-                        <input matInput formControlName="username" type="text">
-                     </mat-form-field>
+                        <input matInput formControlName="username" type="text"
+                        [class.valid]="loginForm.get('username').valid && 
+                        (loginForm.get('username').dirty || loginForm.get('username').touched)">
+                     </mat-form-field>                
+                     <div *ngIf="loginForm.get('username').invalid && loginForm.get('username').errors &&  
+                     (loginForm.get('username').dirty || loginForm.get('username').touched)">
+                        <small class="text-danger"
+                            *ngIf="loginForm.get('username').hasError('pattern')">
+                            Please provide a valid email address
+                        </small>
+                     </div>
                      <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput formControlName="password" type = "password">
+                        <input matInput formControlName="password" type = "password"
+                        [class.valid]="loginForm.get('password').valid && 
+                        (loginForm.get('password').dirty || loginForm.get('password').touched)">
                      </mat-form-field>
-                     <button mat-raised-button color="primary">LOGIN</button>
+                     <div *ngIf="loginForm.get('username').invalid && loginForm.get('username').errors &&  
+                        (loginForm.get('username').dirty || loginForm.get('username').touched) &&
+                        loginForm.get('password').invalid && loginForm.get('password').errors &&  
+                        (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                        <small class="text-danger"
+                            *ngIf="loginForm.get('password').hasError('required') && loginForm.get('username').hasError('required')">
+                            Username and Password field is required.
+                        </small>
+                     </div>
+                     <button mat-raised-button color="primary" [disabled]="loginForm.invalid">LOGIN</button>
                 </div>
             </form>
         </mat-grid-tile>

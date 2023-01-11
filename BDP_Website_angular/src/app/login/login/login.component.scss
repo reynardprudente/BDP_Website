@@ -1,5 +1,7 @@
 @import 'src/styles/variables';
-
+.text-danger{
+    color: $color-red-1;
+}
 .loginTitle{
     font-family: OceaniaRegular;
     color: $color-grey-3;
