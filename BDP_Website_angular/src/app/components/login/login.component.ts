@@ -49,7 +49,6 @@ public loginForm!: FormGroup;
          localStorage.setItem("token", result.token);
          let user = this.authentication.getUser()
          let role = user["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]
-         console.log(role)
         if(role == 'Admin'){
          this.router.navigate(['/admin/user']);
         }

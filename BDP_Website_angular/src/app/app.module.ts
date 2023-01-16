@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
@@ -19,12 +19,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";  
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AdminlayoutComponent
+    AdminlayoutComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
