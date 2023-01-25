@@ -1,12 +1,12 @@
 <div class="user-outline">
-  <button mat-raised-button color="basic" style="background-color:lightgreen;">
+  <button mat-raised-button color="basic" class="add-button"(click)="addUser()">
     <a>Add User</a>
     <mat-icon>add</mat-icon>
   </button>
   <mat-form-field id="search-box">
     <mat-label>Search</mat-label>
-    <input matInput>
-    <button matSuffix mat-button ><mat-icon >search</mat-icon></button>
+    <input matInput [(ngModel)] ="name" >
+    <button matSuffix mat-button (click)="search()"><mat-icon >search</mat-icon></button>
   </mat-form-field>
   <div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -36,11 +36,23 @@
         <td mat-cell *matCellDef="let element"> {{element.emailAddress}} </td>
       </ng-container>
 
+      <ng-container matColumnDef="account">
+        <th mat-header-cell *matHeaderCellDef> Account </th>
+        <td mat-cell *matCellDef="let element"> 
+          <div *ngIf="element.account">
+            Accnt #: {{element.account}} 
+          </div>
+          <div *ngIf="!element.account">
+            <span class="material-icons">no_accounts</span>
+          </div>
+        </td>
+      </ng-container>
+
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>
         <td mat-cell *matCellDef="let element">
-          <button  mat-button ><mat-icon >edit</mat-icon></button>
-          <button  mat-button ><mat-icon >delete</mat-icon></button>
+          <button  mat-button (click)="editUser(element)"><mat-icon >edit</mat-icon></button>
+          <button  mat-button (click)="deleteUser(element)"><mat-icon >delete</mat-icon></button>
         </td>
       </ng-container>
     

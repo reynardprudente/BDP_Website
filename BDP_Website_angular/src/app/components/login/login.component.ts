@@ -38,31 +38,25 @@ public loginForm!: FormGroup;
     })
   }
 
-  onSubmit(){
-   this.spinner.show();
-    firstValueFrom(this.loginService.login(
-      this.loginForm.controls["username"].value,
-       this.loginForm.controls["password"].value
-     ))
-     .then(
-       (result) => {
-         localStorage.setItem("token", result.token);
-         let user = this.authentication.getUser()
-         let role = user["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]
-        if(role == 'Admin'){
-         this.router.navigate(['/admin/user']);
-        }
-        else if(role == 'Customer'){
-          alert('no customer page')
-        }
-         this.spinner.hide();
-       }
-     )
-     .catch((exception:any) =>{
-      console.log(exception.error);
-      this.snackBar.openError(exception.error, 'close')
-     })
-     this.spinner.hide();
+  login(){
+  this.spinner.show();
+   const login =  this.loginService.login(this.loginForm.controls["username"].value, 
+    this.loginForm.controls["password"].value);
+    login.then((result) => {
+      localStorage.setItem("token", String(result));
+      let user = this.authentication.getUser()
+      let role = user["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]
+      if(role == 'Admin'){
+      this.router.navigate(['/admin/user']);
+      }
+      else if(role == 'Customer'){
+      alert('no customer page')
+     }
+    })
+    .catch((err) =>{
+      this.snackBar.openError(err.error, "close")
+    })
+    this.spinner.hide();
      }
   }
 

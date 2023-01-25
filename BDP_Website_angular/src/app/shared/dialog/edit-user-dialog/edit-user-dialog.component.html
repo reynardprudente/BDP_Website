@@ -1,0 +1,31 @@
+<div class="dialog-title">
+    <mat-icon>supervised_user_circle</mat-icon>
+    <a>Edit User</a>
+</div>
+<div class="outline">
+    <form [formGroup]="editUserForm" (ngSubmit)="editUser()">
+        <div  class="edit-user-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Firstname</mat-label>
+                <input matInput formControlName="firstName" type="text">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Middlename</mat-label>
+                <input matInput formControlName="middleName" type="text">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Lastname</mat-label>
+                <input matInput formControlName="lastName" type="text">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Emailaddress</mat-label>
+                <input matInput formControlName="emailAddress" type="text">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Role</mat-label>
+                <input matInput formControlName="role" type="text">
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="editUserForm.invalid">Edit</button>
+        </div>
+    </form>
+</div>

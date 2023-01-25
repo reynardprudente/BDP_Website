@@ -13,13 +13,18 @@ export class LoginService {
     this.http = http
   }
 
-  public login(emailaddress: string, password:string){
-
-       return this.http
-       .post<any>(
-         `${environment.backendApiUrl}/api/login`,
-         {emailaddress: emailaddress, password: password},
-         {headers: this.headers}
-       )
+  public async login(emailaddress: string, password:string){
+    return await new Promise((resolve, reject) => {
+        this.http.post<any>(`${environment.backendApiUrl}/api/login`,
+        {emailaddress: emailaddress, password: password},
+        {headers: this.headers}).subscribe({
+          next: res =>{
+            resolve(res.token)
+          },
+          error:err=>{
+            reject(err)
+           }
+        })
+      })
   }
 }

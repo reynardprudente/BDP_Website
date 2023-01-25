@@ -4,7 +4,6 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminlayoutComponent } from './shared/component/adminlayout/adminlayout.component';
 import { UserComponent } from './components/user/user.component';
 import { AuthGuard } from './shared/guard/auth.guard';
-import { Role } from './shared/enum/roles';
 
 const routes: Routes = [
   { path:'login', component: LoginComponent},
@@ -15,7 +14,7 @@ const routes: Routes = [
     component:AdminlayoutComponent,
     canActivate: [AuthGuard],
     data:{
-      roles:'customer'
+      roles:'admin'
     },
     children:[
       {path:'admin/user', component: UserComponent}

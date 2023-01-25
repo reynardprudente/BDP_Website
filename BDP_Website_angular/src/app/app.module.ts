@@ -20,15 +20,25 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UserComponent } from './components/user/user.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddUserDialogComponent } from './shared/dialog/add-user-dialog/add-user-dialog.component';
+import {MatSelectModule} from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+import { EditUserDialogComponent } from './shared/dialog/edit-user-dialog/edit-user-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AdminlayoutComponent,
-    UserComponent
+    UserComponent,
+    AddUserDialogComponent,
+    EditUserDialogComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -42,11 +52,11 @@ import { UserComponent } from './components/user/user.component';
     MatListModule,
     MatTableModule,
     MatProgressSpinnerModule,
-    FormsModule,
-    ReactiveFormsModule,
     NgxSpinnerModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

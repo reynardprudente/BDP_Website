@@ -34,7 +34,7 @@ namespace BDP_Api_NetCore.Controllers
                 {
                     return BadRequest(result.Message);
                 }
-                return Ok(result.Message);
+                return Ok(result);
             }
             catch (Exception ex)
             {

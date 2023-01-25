@@ -9,7 +9,7 @@
             </mat-card>
         </mat-grid-tile>
         <mat-grid-tile class="right-pane-wrapper" [colspan]="1">
-            <form [formGroup] = "loginForm" (ngSubmit) = "onSubmit()">
+            <form [formGroup] = "loginForm" (ngSubmit) = "login()">
                 <div class="login-form">
                     <h1>Sign In</h1>
                     <mat-form-field appearance="outline">

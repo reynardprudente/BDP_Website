@@ -1,0 +1,93 @@
+<div class="dialog-title">
+    <mat-icon>supervised_user_circle</mat-icon>
+    <a>New User</a>
+</div>
+<div class="outline">
+    <form [formGroup]="addUserForm" (ngSubmit)="addUser()">
+        <div class="add-user-form">
+            <div *ngIf="addUserForm.get('firstName').invalid && addUserForm.get('firstName').errors &&  
+            (addUserForm.get('firstName').dirty || addUserForm.get('firstName').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('firstName').hasError('required')">
+                   Please provide first name
+               </small>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Firstname</mat-label>
+                <input matInput formControlName="firstName" type="text"
+                [class.valid]="addUserForm.get('firstName').valid && 
+                (addUserForm.get('firstName').dirty || addUserForm.get('firstName').touched)">
+            </mat-form-field>
+            <div *ngIf="addUserForm.get('middleName').invalid && addUserForm.get('middleName').errors &&  
+            (addUserForm.get('middleName').dirty || addUserForm.get('middleName').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('middleName').hasError('required')">
+                   Please provide middle name
+               </small>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Middlename</mat-label>
+                <input matInput formControlName="middleName" type = "text"
+                [class.valid]="addUserForm.get('middleName').valid && 
+                (addUserForm.get('middleName').dirty || addUserForm.get('middleName').touched)">
+            </mat-form-field>
+            <div *ngIf="addUserForm.get('lastName').invalid && addUserForm.get('lastName').errors &&  
+            (addUserForm.get('lastName').dirty || addUserForm.get('lastName').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('lastName').hasError('required')">
+                   Please provide last name
+               </small>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Lastname</mat-label>
+                <input matInput formControlName="lastName" type = "text"
+                [class.valid]="addUserForm.get('lastName').valid && 
+                (addUserForm.get('lastName').dirty || addUserForm.get('lastName').touched)">
+            </mat-form-field>
+            <div *ngIf="addUserForm.get('emailAddress').invalid && addUserForm.get('emailAddress').errors &&  
+            (addUserForm.get('emailAddress').dirty || addUserForm.get('emailAddress').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('emailAddress').hasError('pattern')">
+                   Please provide a valid email address
+               </small>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Emailaddress</mat-label>
+                <input matInput formControlName="emailAddress" type = "text"
+                [class.valid]="addUserForm.get('emailAddress').valid && 
+                (addUserForm.get('emailAddress').dirty || addUserForm.get('emailAddress').touched)">
+            </mat-form-field>
+            <div *ngIf="addUserForm.get('password').invalid && addUserForm.get('password').errors &&  
+            (addUserForm.get('password').dirty || addUserForm.get('password').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('password').hasError('pattern')">
+                   Please provide a valid email address
+               </small>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type = "text"
+                [class.valid]="addUserForm.get('password').valid && 
+                (addUserForm.get('password').dirty || addUserForm.get('password').touched)">
+            </mat-form-field>
+            <div *ngIf="addUserForm.get('role').invalid && addUserForm.get('role').errors &&  
+            (addUserForm.get('role').dirty || addUserForm.get('role').touched)">
+               <small class="text-danger"
+                   *ngIf="addUserForm.get('role').hasError('required')">
+                   Please select role
+               </small>
+            </div>
+            <mat-form-field appearance="fill">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName ="role"
+                [class.valid]="addUserForm.get('role').valid && 
+                (addUserForm.get('role').dirty || addUserForm.get('role').touched)">
+                    <mat-option *ngFor="let role of roles" [value]="role.id">
+                      {{role.roleValue}}
+                    </mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="addUserForm.invalid">Add</button>
+        </div>
+    </form>
+</div>
